@@ -1,0 +1,80 @@
+.myResume{
+  cursor: pointer;
+  color: white;
+  bottom: 0%;
+}
+
+.firstBox{
+  width: 30%;
+  height: 300px;
+}
+.secondBox{
+  width: 30%;
+  height: 300px;
+  background-color: black;
+}
+
+#firstBB{
+    position: absolute;
+    left: 10%;
+    background-image: url("VTpic.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+   
+  
+}
+
+#secondBB{
+    position: absolute;
+    left: 5%;
+    background-image: url("github.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+#firstBB::before, 
+#secondBB::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease-in-out;
+  }
+  a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Change link color to your desired color */
+  }
+  
+#firstBB:hover::before
+{
+    background-color: rgba(240, 172, 46, 0.4);
+    cursor: pointer;
+  }
+  #secondBB:hover::before
+  {
+    background-color: rgba(77, 83, 85, 0.4);
+    font-style: italic;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+ 
+#secondBB{
+  position: absolute;
+  left: 60%;
+}
+
+@media (max-width: 900px){
+  .myResume{
+    bottom: 0%;
+  }
+}
